@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100vh;
+    width: 100%;
+    font: 18px 'Rubik', sans-serif;
+    background-color: rgb(240, 235, 235);
+}
+
+
+h2{
+    color: hsl(0, 0%, 59%);
+    margin-bottom:  0.8rem;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 17%);
+}
+
+.ip-tracker{
+    background: url("./images/pattern-bg.png") center center/cover no-repeat;
+    height: 15rem;
+    padding-top: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.ip-tracker>h1{
+    color: white;
+    font-weight: 500;
+    font-size: 1.75rem;
+}
+
+form{
+    min-width: 28rem;
+    width: 35%;
+    margin: 1.5rem auto 2.5rem;
+    display: flex;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+::placeholder{
+    color: hsl(0, 0%, 59%);
+}
+
+
+input{
+    border: none;
+    padding: 1rem 1.3rem;
+    width: 90%;
+    font-size: 1rem;
+}
+
+input:focus{
+    outline: none;
+}
+
+button{
+    background: black url("./images/icon-arrow.svg") center center no-repeat;
+    width: 10%;
+    border: none;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: hsl(0, 0%, 17%);
+}
+
+
+.ip-tracker > .data{
+    display: flex;
+    background-color: white;
+    width: 75%;
+    margin: auto;
+    text-align: left;
+    padding: 1.75rem 2rem;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 999;
+    top: 1rem;
+    box-shadow: 0 5rem 5rem -2.5rem rgb(0 0 0 / 10%);
+}
+
+.ip-tracker>.data>div{
+    width: 25%;
+    word-wrap: break-word;
+}
+
+.ip-tracker>.data>div:not(:first-child){
+    padding-left: 1.75rem;
+    border-left: 1px solid lightgray;
+}
+
+#mapid{
+    height:calc(100vh - 15rem);
+}
+
+
+@media screen and (max-width:1201px){
+    .ip-tracker > .data{
+        width: 85%;
+        padding: 1.5rem;
+        top: -0.5rem;
+    }
+
+    p{
+        font-size: 24px;
+    }
+
+}
+
+@media screen and (max-width:769px){
+    h2{
+        font-size: 10px;
+        margin-bottom: 0.4rem;
+    }
+
+    p{
+        font-size: 20px;
+        margin-bottom: 1.2rem;
+    }
+
+    form{
+        min-width: 85%;
+    }
+
+    .ip-tracker>h1{
+        font-size: 1.4rem;
+    }
+
+    .ip-tracker > .data{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.5rem 1.5rem 0.3rem;
+        top: -1rem;
+    }
+
+    .ip-tracker>.data>div{
+        width: 100%;
+        padding-left: 0 !important;
+        border: none !important;
+    }
+
+    .leaflet-left {
+        left: -10px;
+    }
+    .leaflet-top {
+        top: -10px;
+    }
+
+}
